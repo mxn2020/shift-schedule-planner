@@ -1,59 +1,94 @@
 # Shift & Schedule Planner
 
-## Pages & Features
+Employee shift scheduling, swaps, and coverage planning.
 
-### 1. Dashboard
-- Today's schedule at a glance
-- Staffing coverage status (under/over-staffed alerts)
-- Pending shift swap requests
-- Hours summary (this week / this month)
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Schedule Builder
-- Weekly / bi-weekly / monthly calendar view
-- Drag-and-drop shift assignment
-- Auto-fill based on employee availability & rules
-- Copy previous schedule as template
-- Publish schedule to team
+## Tech Stack
 
-### 3. Shifts
-- Define shift types (morning, afternoon, night, split)
-- Set shift times, break rules, and pay rates
-- Color-coded shift visualization
-- Minimum / maximum hour constraints
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Employee Availability
-- Employees submit availability preferences
-- Time-off requests integrated into schedule
-- Recurring availability patterns
-- Conflict detection when scheduling
+## Getting Started
 
-### 5. Shift Swaps & Requests
-- Request shift swap with another employee
-- Manager approval workflow
-- Open shift board (claim available shifts)
-- Notification to affected parties
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Time Clock
-- Clock in / clock out per shift
-- GPS / location verification
-- Break time tracking
-- Overtime flagging
+## License
 
-### 7. Team
-- Employee list with roles, departments, skill tags
-- Max hours / week configuration per employee
-- Certification & qualification tracking
-- Contact information
+MIT © Mehdi Nabhani
 
-### 8. Reports
-- Hours worked per employee / department
-- Overtime analysis
-- Attendance & punctuality stats
-- Labor cost projection
-- Export as PDF / CSV
+---
 
-### 9. Settings
-- Scheduling rules (max consecutive days, rest periods)
-- Overtime thresholds
-- Notification preferences
-- Pay period configuration
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
